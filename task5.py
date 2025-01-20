@@ -5,3 +5,19 @@
 # Его длина: длина
 #
 # Выведите это слово и длину в консоль.
+import re
+f = open('task5.txt', encoding='utf-8')
+text = re.split(r'[.,!? \n]+', f.read())
+text.pop(-1)
+f.close()
+maxlen = len(text[0])
+index = 0
+
+for i in range(len(text)):
+
+    if len(text[i]) > maxlen:
+         maxlen = len(text[i])
+         index = i
+
+print('The longest word: ', text[index])
+print('Its length:', maxlen)

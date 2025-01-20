@@ -4,7 +4,7 @@
 # Общее количество слов во всем тексте файла.
 # Общее количество символов (включая пробелы).
 # Выведите полученную статистику на экран.
-f = open("task1.txt", encoding = "utf-8")
+f = open("task1.txt", encoding="utf-8")
 text = f.read()
 print('Quantity of lines:', len(text.split('\n')))
 words = 1
@@ -34,3 +34,4 @@ for i in range(len(newtext)):
         words += 2
 
 print('Quantity of words:', words)
+print('Quantity of symbols:', len(newtext))

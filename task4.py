@@ -3,3 +3,16 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+quant = int(input('How many sentences? '))
+text = ''
+f = open('task4answer.txt', 'x', encoding='utf-8')
+
+for i in range(quant):
+    sent = str(input())
+    f.write(sent.replace(' ', '_').upper() + '\n')
+
+f = open('task4answer.txt', encoding='utf-8')
+print(f.read())
+f.close()
+
+
